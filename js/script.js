@@ -20,10 +20,7 @@ const renderGoodsItem = (title = "default", price = 0) => `<div class="goods-ite
 
 const renderGoodsList = (list= "") => {
     let goodsList = list.map(item => renderGoodsItem(item.title, item.price));
-    console.log(goodsList);
-    let newGoodsList = goodsList.join('');
-    console.log(newGoodsList);
+    let newGoodsList = goodsList.join(''); //убрать запятые
     document.getElementById("goodsListId").innerHTML = newGoodsList;
-    //document.querySelector('.goods-list').innerHTML = goodsList;
 }
 renderGoodsList(goods);
