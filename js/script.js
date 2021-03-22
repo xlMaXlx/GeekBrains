@@ -20,7 +20,7 @@ const renderGoodsItem = (title = "default", price = 0) => `<div class="goods-ite
 
 const renderGoodsList = (list= "") => {
     let goodsList = list.map(item => renderGoodsItem(item.title, item.price));
-    let newGoodsList = goodsList.join(''); //убрать запятые
+    let newGoodsList = goodsList.join('');
     document.getElementById("goodsListId").innerHTML = newGoodsList;
 }
 renderGoodsList(goods);
