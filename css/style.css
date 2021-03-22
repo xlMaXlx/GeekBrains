@@ -4,12 +4,13 @@
     box-sizing: border-box;
 }
 
-.container{
+.container {
     margin: 0 auto;
     max-width: 1280px;
 }
 
-.goods-list {
+.goods-list,
+.cart-list {
     display: flex;
     justify-content: flex-start;
     border: 1px solid #000;
@@ -27,6 +28,24 @@
     margin: 2px 4px;
 }
 
+.cart-item {
+    border-bottom: 3px solid #CD5C5C;
+    border-left: 4px solid #FFA07A;
+    min-width: 80px;
+    min-height: 50px;
+    padding: 4px;
+    margin: 2px 4px;
+}
+
+.hamburger-item {
+    border-bottom: 3px solid #aD1C5C;
+    border-left: 4px solid #4FA07A;
+    min-width: 80px;
+    min-height: 50px;
+    padding: 4px;
+    margin: 2px 4px;
+}
+
 .cart-button {
     padding: 3px 6px;
     font-size: 120%;
@@ -36,9 +55,14 @@
     cursor: pointer;
     outline: none;
     text-transform: uppercase;
-    
+
 }
 
 .cart-button:hover {
     background-color: peachpuff;
+}
+
+.total-cost,
+.total-cost-cart {
+    font-size: 125%;
 }
