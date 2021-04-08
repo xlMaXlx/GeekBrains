@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js"></script>
+
+    <style>
+        /* глобальные стили */
+
+    </style>
+
+    <style scoped>
+        /* локальные стили */
+
+    </style>
+
+    <style scoped>
+        .a>>>.b {
+            /* ... */
+        }
+
+    </style>
+    <style module="a">
+        /* идентификатор будет внедрён как a */
+
+    </style>
+
+    <style module="b">
+        /* идентификатор будет внедрён как b */
+
+    </style>
+</head>
+
+<body>
+    <!-- ComponentA.vue -->
+    <template>
+        <div>
+            <ComponentB />
+            <p>{{ docs }}</p>
+        </div>
+    </template>
+
+    <script>
+        import ComponentB from "./ComponentB.vue";
+
+        export default {
+            components: {
+                ComponentB
+            },
+            data() {
+                return {
+                    docs: ComponentB.__docs
+                };
+            }
+        };
+
+    </script>
+</body>
+
+</html>
